@@ -5,24 +5,38 @@ name: Go
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master", "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master", "main" ]
 
 jobs:
-
-  build:
+  build-app-websocket:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        work_dir:
+          - ./selector
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-    - name: Set up Go
-      uses: actions/setup-go@v4
-      with:
-        go-version: '1.20'
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 'stable'
 
-    - name: Build
-      run: cd selector/cmd/ && go build -v -o selector
+      - name: Build
+        working-directory: ${{ matrix.work_dir }}
+        run: |
+          go build -v ./...
 
-    - name: Test
-      run: cd selector/cmd/ && go test -v
+      - name: Lint
+        uses: golangci/golangci-lint-action@v3
+        with:
+          version: latest
+          working-directory: ${{ matrix.work_dir }}
+
+      - name: Test
+        working-directory: ${{ matrix.work_dir }}
+        run: |
+          go test -v -race -coverpkg=./... ./...

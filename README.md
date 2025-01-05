@@ -4,6 +4,10 @@
 
 ![](docs/img/everytop.jpg)
 
+## Точки входа
+
+- telegram bot: [@EveryTopBot](https://t.me/EveryTopBot)
+
 ## External APIs
 
 > [!NOTE]
