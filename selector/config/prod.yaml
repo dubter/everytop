@@ -1,0 +1,5 @@
+providers:
+  - name: youtube
+    endpoint: yt-api.p.rapidapi.com
+  - name: news
+    endpoint: news-api14.p.rapidapi.com
