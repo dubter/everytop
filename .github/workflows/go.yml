@@ -22,7 +22,7 @@ jobs:
         go-version: '1.20'
 
     - name: Build
-      run: go build -v ./selector/...
+      run: cd selector/cmd/ && go build -v -o selector
 
     - name: Test
-      run: go test -v ./selector/...
+      run: cd selector/cmd/ && go test -v
