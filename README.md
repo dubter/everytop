@@ -21,3 +21,7 @@
 > [!IMPORTANT]
 > Выбираем API для получения трендов по разным категориям здесь:
 > https://rapidapi.com/search?term=trend&sortBy=ByRelevance
+
+## Архитектура
+
+![](docs/img/architecture.png)
