@@ -22,14 +22,16 @@
 > Выбираем API для получения трендов по разным категориям здесь:
 > https://rapidapi.com/search?term=trend&sortBy=ByRelevance
 
-## Общая Схема
+## Архитектура
 
-![](docs/img/architecture.jpg)
-
-## Базовая часть
+### Базовая часть
 
 ![](docs/img/basic.png)
 
-## Продвинутая часть
+### Продвинутая часть
 
 ![](docs/img/advanced.png)
+
+> [!IMPORTANT]
+> Вся схема:
+> https://drive.google.com/file/d/1XPy-eF1QjcIsI0cigKIpRPg_qU6b32yQ/view?usp=sharing
