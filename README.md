@@ -24,7 +24,7 @@
 
 ## Общая Схема
 
-![](docs/img/architecture.png)
+![](docs/img/architecture.jpg)
 
 ## Базовая часть
 
